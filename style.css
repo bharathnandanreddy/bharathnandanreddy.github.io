@@ -4,7 +4,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 h1 {
-  font-size:80px;
+  font-size:72px;
   font-family: 'Gentium Book Basic',serif;
   font-weight:bold;
   margin: 40px 0 20px 0;
@@ -12,6 +12,7 @@ h1 {
 h2 {
   font-family: 'Gentium Book Basic',serif;  font-size:50px;
   margin: 20px 0 0 0;
+  
 }
 h3 {
   font-family: 'Open Sans', sans-serif;
@@ -169,20 +170,19 @@ a.button.small:hover {
 }
 
 #footer {
-  background-color: #152330;
+  background-color: #2C2C2C;
   background-image:url(http://www.pahgawks.com/wp-content/uploads/2013/09/footer1.jpg);
   background-repeat:repeat-x;
   background-position: top center;
   color:#FFF;
 }
-#footer a.button {
-  background-color:#34495e;
-  font-size:0.8em;
-  padding:8px;
+
+#footer a{
+ text-decoration: none;
+ text-align:center;
 }
-#footer a.button:hover {
-  background-color:#455A6F;
-}
+
+
 #footer p {
   text-align:center;
 }
@@ -190,6 +190,28 @@ a.button.small:hover {
   width:100%;
   height:400px;
 }
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.imagetile {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 60px 20px 60px;
+  border-radius: 8px;
+}
+
+
+
+
+
 
 
 @media all and (max-width: 1300px) {
@@ -206,17 +228,18 @@ a.button.small:hover {
   #header h2 {
     font-size:30px;
   }
+  .contact-links a {
+    margin-right: 10px;
+  }
+  
+  .contact-links img {
+    width: 30px;
+    height: 30px;
+  }
+  
 }
 
-.imagetile {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  border-radius: 8px;
-}
+
 
 
 
@@ -261,6 +284,16 @@ a.button.small:hover {
   #footer p {
     text-align:left;
   }
+  
+}
+
+
+@media all and (max-width:850px) {
+  .row{
+    display: block;
+    margin: auto;
+    width: fit-content;
+  }
 }
 @media all and (max-width:500px) {
   h1 {
@@ -281,6 +314,7 @@ a.button.small:hover {
   #projects iframe {
     height: 250px;
   }
+  
 }
 @media all and (max-width:280px) {
   h1 {
@@ -289,7 +323,16 @@ a.button.small:hover {
   h2 {
     font-size:25px;
   }
+
+  .row{
+    display: block;
+    margin: auto;
+    width: fit-content;
+  }
+  
 }
+
+
 
 
 
@@ -319,3 +362,12 @@ a.button.small:hover {
   cursor: pointer;
   background-color: #dadddf;
 }
+
+.contact-links{
+  margin: auto;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
